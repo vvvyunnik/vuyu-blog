@@ -9,7 +9,7 @@ type Post = {
 }
 
 async function getPosts() {
-  const url = `${CONTENT_API_KEY}/ghost/api/v3/content/posts/?key=${API_URL}&fields=title,slug,custom_excerpt`;
+  const url = `${API_URL}/ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}&fields=title,slug,custom_excerpt`;
   
   const res = await fetch(
     url
@@ -32,7 +32,7 @@ const Home: React.FC<{ posts: Post[] }> = (props) => {
 
   return (
     <div className={styles.container}>
-      <h1>Hello to my blog</h1>
+      <h1>#someInterestingLinks</h1>
       <ul>
         {posts.map((post, index) => {
           return (

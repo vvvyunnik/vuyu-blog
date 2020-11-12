@@ -11,7 +11,7 @@ type Post = {
 }
 
 async function getPost(slug: string) {
-  const url = `${CONTENT_API_KEY}/ghost/api/v3/content/posts/slug/${slug}?key=${API_URL}&fields=title,slug,html`;
+  const url = `${API_URL}/ghost/api/v3/content/posts/slug/${slug}?key=${CONTENT_API_KEY}&fields=title,slug,html`;
 
   const res = await fetch(
     url
